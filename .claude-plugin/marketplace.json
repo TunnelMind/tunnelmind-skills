@@ -1,0 +1,20 @@
+{
+  "name": "tunnelmind",
+  "owner": {
+    "name": "TunnelMind",
+    "email": "api@tunnelmind.ai"
+  },
+  "metadata": {
+    "description": "Trust-attestation skills for Claude agents on the open web. Built claude-first on the TunnelMind verify/preflight API.",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "tunnelmind-trust",
+      "source": "tunnelmind-trust",
+      "description": "Consult TunnelMind before acting on, and to attest the identity of, any external destination — allow/caution/deny pre-flight + fused Scry x Sigil x GhostRoute verdict, each with a signed receipt.",
+      "version": "0.1.0",
+      "author": { "name": "TunnelMind", "email": "api@tunnelmind.ai" }
+    }
+  ]
+}

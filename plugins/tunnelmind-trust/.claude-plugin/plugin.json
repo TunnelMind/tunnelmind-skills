@@ -1,0 +1,9 @@
+{
+  "name": "tunnelmind-trust",
+  "description": "Trust attestation for Claude agents on the open web. Decide whether to act on an external destination and attest who it is, with a signed, independently re-checkable receipt for every check.",
+  "version": "0.1.0",
+  "author": { "name": "TunnelMind", "email": "api@tunnelmind.ai" },
+  "homepage": "https://tunnelmind.ai",
+  "license": "Apache-2.0",
+  "keywords": ["trust", "attestation", "provenance", "agent", "preflight", "verify", "supply-chain", "rpki", "receipt"]
+}
