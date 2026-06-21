@@ -11,8 +11,8 @@
     {
       "name": "tunnelmind-trust",
       "source": "./plugins/tunnelmind-trust",
-      "description": "Consult TunnelMind before acting on, and to attest the identity of, any external destination — allow/caution/deny pre-flight + fused Scry x Sigil x GhostRoute verdict, each with a signed receipt.",
-      "version": "0.1.0",
+      "description": "Four trust-decision skills + a reference harness: allow/caution/deny pre-flight, fused Scry x Sigil x GhostRoute identity verdict, claim-vs-conduct key reconciliation, and routing-sovereignty verification — each with a signed receipt.",
+      "version": "0.2.0",
       "author": { "name": "TunnelMind", "email": "api@tunnelmind.ai" }
     }
   ]

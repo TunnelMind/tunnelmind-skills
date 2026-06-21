@@ -88,3 +88,12 @@ appends a hash-chained `preflight:consulted` witness event — reference its
 
 A verdict is commodity; the *receipt of having asked* is the artifact that
 makes your action accountable. Do not discard it.
+
+## Enforce it in code (optional)
+
+A SKILL teaches *you* the policy; for an unattended agent, wrap your
+consequential tool calls with the **Preflight Guardian** reference harness
+shipped alongside this skill (`reference/preflight-guardian/`). It runs the
+pre-flight, enforces the decision table (including the hard floors) before the
+action executes, and appends every `consultation_receipt` to an action log —
+so the gate cannot be skipped by accident.
