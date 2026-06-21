@@ -32,10 +32,22 @@ higher limits pass `Authorization: Bearer <key>` (see
 |-------|--------------------|---------|
 | `preflight-should-i-act` | May I act on this destination **right now**? | `allow` / `caution` / `deny` + a 5-minute signed consultation receipt |
 | `verify-actor` | **Who** is this and do its claims hold? | Fused Scry × Sigil × GhostRoute verdict + adversary classification + a durable signed receipt |
+| `reconcile-actor` | Does what this **key** claims about itself match what the network has **seen it do**? | Proven attestation tier + claim-vs-conduct contradictions + a self-verifying receipt |
+| `verify-sovereignty` | Is this endpoint **where and who** it claims — right jurisdiction, valid routing? | Sovereignty tier + integrity score + origin ASN / RPKI / cert CA + an optional signed receipt |
 
-Use **pre-flight** as an action gate before a payment, credential send, fetch,
-or publish. Use **verify** for due diligence, attribution, and durable
-attestation.
+- **pre-flight** — action gate before a payment, credential send, fetch, or publish.
+- **verify-actor** — due diligence, attribution, durable attestation of a network destination.
+- **reconcile-actor** — agent-to-agent handshakes: confirm a key's claimed attestation is real and matches its behavior.
+- **verify-sovereignty** — before routing data/inference to an endpoint asserting EU residency, FedRAMP, or sovereign-AI.
+
+## Reference harness — Preflight Guardian
+
+[`plugins/tunnelmind-trust/reference/preflight-guardian/`](./plugins/tunnelmind-trust/reference/preflight-guardian/)
+is a zero-dependency harness that **enforces** the `preflight-should-i-act`
+policy in code: it wraps a consequential action, runs the pre-flight first,
+honors the hard floors, and writes the receipt before the action — so an
+unattended agent cannot skip the gate. Run `node example.mjs` for a no-network
+self-check.
 
 ## How these are maintained
 
